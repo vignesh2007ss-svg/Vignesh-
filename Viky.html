@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vignesh</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #111;
+      font-weight: bold;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, #ff0000, #990000);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .profile-picture {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      margin-top: 1rem;
+    }
+    .dark-toggle {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      color: #cc0000;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #cc0000;
+      border: 2px solid #cc0000;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background: #cc0000;
+      color: #fff;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    h2 {
+      color: #cc0000;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    ul { margin-left: 1.2rem; }
+    ul li { margin-bottom: 0.5rem; }
+
+    /* ===== BUTTONS ===== */
+    .download-button {
+      display: inline-block;
+      background: #cc0000;
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .download-button:hover {
+      background: #990000;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #cc0000;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    /* ===== DARK MODE ===== */
+    .dark-mode { background-color: #121212; color: #f5f5f5; }
+    .dark-mode section { background-color: #1e1e1e; color: #f5f5f5; }
+    .dark-mode header { background: linear-gradient(135deg, #660000, #330000); }
+    .dark-mode nav { background: #222; }
+    .dark-mode nav a { color: #f5f5f5; border-color: #cc0000; }
+    .dark-mode nav a:hover { background: #cc0000; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 2rem">
+    <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+  <img src="./vignesh.jpg" alt="Profile Picture" class="profile-picture" id="profileImage" style="margin: 0 1rem 0 0; align-self: flex-start;">
+  <div style="text-align: left;">
+    <h1>Vignesh</h1>
+    <p>Bachelor of Computer Applications(BCA)</p>
+     <input type="file" id="fileInput" accept="image/*" style="display:none">
+  <button onclick="showModal()">Change Profile</button>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="#about" class="active">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#experience">Experience</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== SECTIONS ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Vignesh I Studying BCA(2nd Year) I Learning Machine Language.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>BCA</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Internet of Things</li>
+      <li>Cloud Computing</li>
+      <li>Python, Java, C++, JavaScript</li>
+      <li>Machine Learning & AI</li>
+      <li>Blockchain</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+       <li><a href="https://github.com/vignesh2007ss-svg/Vignesh-.git">Github</a></li>
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div style="text-align: center;">
+      <a href="https://skills.yourlearning.ibm.com/certificate/share/f930216f5aewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI1MDI4OTY5UkVHIiwKICAib2JqZWN0SWQiIDogIlBMQU4tNzQxNTgyRUQ2QzQ0Igp9e7b1e2791b-10" target="_blank">
+        <img src="./ibmcert.png" alt="MS-356" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"> </a>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><b>Iam Created Website</b> </li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="./resume.pdf" target="_blank" class="download-button">Download CV</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:vignesh2007ss@gmail.com">vignesh2007ss@gmail.com</a></p>
+    <p>Phone: +91-9345952940</p>
+    <p>Location: Tiruppur, India</p>
+    <p>
+      <a href="https://linkedin.com/in/vignesh" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/vignesh" target="_blank">GitHub</a> |
+      <a href="https://twitter.com/vignesh" target="_blank">Twitter</a> |
+      <a href="https://instagram.com/vignesh" target="_blank">Instagram</a>
+    </p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Vignesh . All rights reserved.</p>
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+    // highlight active nav link on scroll
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let fromTop = window.scrollY + 100;
+      navLinks.forEach(link => {
+        let section = document.querySelector(link.getAttribute("href"));
+        if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          navLinks.forEach(l => l.classList.remove("active"));
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
